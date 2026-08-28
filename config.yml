@@ -1,0 +1,67 @@
+# =========================================================
+#  VoucherPlugin - konfigurace
+# =========================================================
+# Kazdy voucher ma vlastni ID (klic pod "vouchers:") a muzes
+# jich vytvorit libovolne mnozstvi. ID pouzivas u prikazu
+# /voucher give <hrac> <ID>
+#
+# Placeholdery v prikazech a zpravach:
+#   %player%  -> jmeno hrace
+#   %uuid%    -> UUID hrace
+#
+# "commands" se spousti pres konzoli - takze sem muzes dat
+# cokoliv, co normalne pises do konzole (LuckPerms, Vault
+# ekonomika, Essentials, EssentialsX eco, atd.)
+# =========================================================
+
+vouchers:
+
+  vip_rank:
+    material: PAPER
+    name: "&6&lVIP Voucher"
+    lore:
+      - "&7Klikni pravym tlacitkem a ziskej"
+      - "&6&lVIP&7 hodnost na serveru!"
+      - ""
+      - "&e▶ Pravy klik pro pouziti"
+    glow: true
+    consume-on-use: true
+    commands:
+      - "lp user %player% parent add vip"
+    receive-message: "&aObdrzel jsi &6VIP Voucher&a! Klikni na nej pro pouziti."
+    redeem-message: "&aGratulujeme! Ziskal jsi hodnost &6VIP&a!"
+    broadcast: "&6%player% &ase prave stal &6VIP &ahracem diky voucheru!"
+
+  money_1000:
+    material: EMERALD
+    name: "&a&l1.000 &2Kc Voucher"
+    lore:
+      - "&7Klikni pravym tlacitkem a ziskej"
+      - "&a1.000 Kc&7 na svuj ucet!"
+      - ""
+      - "&e▶ Pravy klik pro pouziti"
+    glow: false
+    consume-on-use: true
+    commands:
+      - "eco give %player% 1000"
+    receive-message: "&aObdrzel jsi voucher na &a1.000 Kc&a!"
+    redeem-message: "&aZiskal jsi &a1.000 Kc&a na svuj ucet!"
+    broadcast: ""
+
+  money_5000:
+    material: DIAMOND
+    name: "&b&l5.000 &3Kc Voucher"
+    lore:
+      - "&7Vzacny voucher!"
+      - "&7Klikni pravym tlacitkem a ziskej"
+      - "&b5.000 Kc&7 na svuj ucet!"
+      - ""
+      - "&e▶ Pravy klik pro pouziti"
+    glow: true
+    consume-on-use: true
+    custom-model-data: 0
+    commands:
+      - "eco give %player% 5000"
+    receive-message: "&bObdrzel jsi vzacny voucher na &b5.000 Kc&b!"
+    redeem-message: "&bZiskal jsi &b5.000 Kc&b na svuj ucet!"
+    broadcast: "&b%player% &3si prave vyzvedl &b5.000 Kc &3z voucheru!"

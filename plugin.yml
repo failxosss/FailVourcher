@@ -1,0 +1,17 @@
+name: VoucherPlugin
+version: '1.0.0'
+main: com.vouchers.paper.VoucherPlugin
+api-version: '1.21'
+author: Claude
+description: 'Voucher papirky, ktere hraci po pouziti dají rank, penize nebo cokoliv jineho podle config.yml'
+
+commands:
+  voucher:
+    description: Sprava a vydavani voucheru
+    usage: /voucher <give|list|reload>
+    aliases: [vouchers, vc]
+
+permissions:
+  voucher.admin:
+    description: Umoznuje davat vouchery a spravovat plugin
+    default: op
