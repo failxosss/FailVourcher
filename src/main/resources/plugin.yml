@@ -2,7 +2,7 @@ name: VoucherPlugin
 version: '1.0.0'
 main: com.vouchers.paper.VoucherPlugin
 api-version: '1.21'
-author: Claude
+author: Failxos
 description: 'Voucher papirky, ktere hraci po pouziti dají rank, penize nebo cokoliv jineho podle config.yml'
 
 commands:
